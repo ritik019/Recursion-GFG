@@ -1,0 +1,19 @@
+class Solution
+{
+    public:
+    //Function to count number of ways to reach the nth stair.
+    int countWays(int n)
+    {
+        // your code here
+        if( n==1 || n==2){
+            return n;
+        }
+        
+        int recCal1 = countWays(n-1);
+        int recCal2 = countWays(n-2);
+        
+        int smallcal = recCal1 + recCal2;
+        
+        return smallcal;
+    }
+};
